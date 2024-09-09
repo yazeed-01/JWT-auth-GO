@@ -1,0 +1,60 @@
+the tests:
+
+
+Method: POST
+URL: http://localhost:8080/signup
+Body:
+json
+
+{
+  "username": "user1",
+  "email": "user1@example.com",
+  "password": "password123"
+}
+______________________________________
+
+Method: POST
+URL: http://localhost:8080/login
+Body:
+json
+
+{
+  "email": "user1@example.com",
+  "password": "password123"
+}
+______________________________________
+
+Method: POST
+URL: http://localhost:8080/user-info
+Header:
+key: Authorization
+value: access token
+______________________________________
+
+Method: POST
+URL: http://localhost:8080/logout
+Header:
+key: Authorization
+value: refresh token
+______________________________________
+
+Method: GET
+URL: http://localhost:8080/check-status
+Header:
+key: Authorization
+value: access token
+______________________________________
+
+Method: GET
+URL: http://localhost:8080/admin
+Header:
+key: Authorization
+value: access token
+______________________________________
+
+Method : POST
+URL: http://localhost:8080/refresh-token
+Header:
+key: Authorization
+value: refresh token
+
